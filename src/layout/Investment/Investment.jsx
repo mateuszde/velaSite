@@ -8,7 +8,7 @@ import Paragraph from "../../components/Paragraph/Paragraph";
 import TextBolder from "../../components/TextBolder/TextBolder";
 import srcVideo from "../../assets/Video/DronInwestycja.mp4";
 import Video from "../../components/Video/Video";
-// import Map from "../../components/Map/MyMap";
+import MyMap from "../../components/MyMap/MyMap";
 
 import {
   ContentWrapper,
@@ -196,16 +196,11 @@ const Investment = () => {
             <IconWithText icon="IKO" text="prywatny ogród" />
             <IconWithText icon="IKO" text="inwestycja premium" />
           </IconsWrapper>
-          <h2>
-            TODO: powyżej poprawić układ, zrezygnować z kwadratów, tylko ikony,
-            chyba będzie lepiej
-          </h2>
         </Wrapper>
-        {/* 
-        <MapWrapper>
-          <Map />
-        </MapWrapper> */}
         <RealEstateTable />
+        <MapWrapper>
+          <MyMap />
+        </MapWrapper>
       </TextWithChildrenComponent>
     </ContainerWidth>
   );

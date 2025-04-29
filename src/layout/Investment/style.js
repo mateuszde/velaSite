@@ -2,7 +2,8 @@ import styled from "styled-components";
 export const MapWrapper = styled.div`
   width: 100%;
   height: 500px;
-  border-radius: 25px;
+  border-radius: 10px;
+  margin: 48px 0;
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
