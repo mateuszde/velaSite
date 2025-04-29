@@ -33,7 +33,7 @@ const MyMap = () => {
       />
 
       <Marker position={[54.2185796, 18.60962201]}>
-        <Popup>Dom bliźniak B1/B2</Popup>
+        <Popup>Dom dwulokalowy B1/B2</Popup>
       </Marker>
       <Polygon pathOptions={lightGreenOption} positions={polygon2} />
 

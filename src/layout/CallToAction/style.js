@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  min-height: 400px;
+  min-height: 500px;
   position: relative;
   display: flex;
   align-items: center;

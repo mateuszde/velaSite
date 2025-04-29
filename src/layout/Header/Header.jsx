@@ -1,7 +1,20 @@
 import Line from "../../components/Line/Line";
 import TextColor from "../../components/TextColor/TextColor";
 import Button from "../../components/Button/Button";
-import image from "../../assets/HeroImage.jpg";
+// import image from "../../assets/HeroImage.jpg";
+
+import styled from "styled-components";
+import video from "../../assets/HeroVideo.mp4";
+
+const StyledVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-position: 10% 30%;
+`;
 
 import {
   Wrapper,
@@ -16,7 +29,8 @@ import {
 const Header = () => {
   return (
     <Wrapper>
-      <BackgroundImage src={image} />
+      {/* <BackgroundImage src={image} /> */}
+      <StyledVideo src={video} autoPlay loop muted playsInline />
       <LinearGradient />
       <ContentWrapper>
         <TitleWrapper>

@@ -11,7 +11,7 @@ import {
   StyledHeading2,
   ButtonsWrapper,
 } from "./style";
-import image from "../../assets/Images/1_hr.jpg";
+import image from "../../assets/Images/2_hr.jpg";
 
 const CallToAction = () => {
   return (
