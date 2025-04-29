@@ -27,8 +27,8 @@ import image3 from "../../assets/Images/3_hr.jpg";
 import image4 from "../../assets/Images/4_hr.jpg";
 import image5 from "../../assets/Images/5_hr.jpg";
 import image6 from "../../assets/Images/6_hr.jpg";
-// import RealEstateTable from "../../components/RealEstateTable/RealEstateTable";
 import IconWithText from "../../components/IconWithText/IconWithText";
+import RealEstateTable from "../../components/RealEstateTable/RealEstateTable";
 
 const images = [
   {
@@ -205,7 +205,7 @@ const Investment = () => {
         <MapWrapper>
           <Map />
         </MapWrapper> */}
-        {/* <RealEstateTable /> */}
+        <RealEstateTable />
       </TextWithChildrenComponent>
     </ContainerWidth>
   );
