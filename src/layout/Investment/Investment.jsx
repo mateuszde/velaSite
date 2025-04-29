@@ -1,6 +1,14 @@
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import {
+  faTree,
+  faCar,
+  faHouseChimney,
+  faSackDollar,
+  faMap,
+} from "@fortawesome/free-solid-svg-icons";
+
 import ContainerWidth from "../../components/ContainerWidth/ContainerWidth";
 import TextWithChildrenComponent from "../../components/TextWithChildrenComponent/TextWithChildrenComponent";
 import SubTitle from "../../components/SubTitle/SubTitle";
@@ -190,11 +198,14 @@ const Investment = () => {
             </Wrapper>
           </Wrapper>
           <IconsWrapper>
-            <IconWithText icon="IKO" text="funkcjonalny układ pomieszczeń" />
-            <IconWithText icon="IKO" text="spokojna okolica" />
-            <IconWithText icon="IKO" text="prywatny garaż" />
-            <IconWithText icon="IKO" text="prywatny ogród" />
-            <IconWithText icon="IKO" text="inwestycja premium" />
+            <IconWithText
+              icon={faHouseChimney}
+              text="funkcjonalny układ pomieszczeń"
+            />
+            <IconWithText icon={faMap} text="spokojna okolica" />
+            <IconWithText icon={faCar} text="prywatny garaż" />
+            <IconWithText icon={faTree} text="prywatny ogród" />
+            <IconWithText icon={faSackDollar} text="inwestycja premium" />
           </IconsWrapper>
         </Wrapper>
         <RealEstateTable />

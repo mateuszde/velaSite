@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Wrapper = styled.div`
   width: 150px;
@@ -9,6 +10,7 @@ const Wrapper = styled.div`
 const IconWrapper = styled.div`
   height: 90px;
   width: 90px;
+  font-size: 40px;
 
   margin-bottom: 20px;
   border-radius: 15px;
@@ -39,7 +41,9 @@ const TextWrapper = styled.div`
 const IconWithText = ({ icon, text }) => {
   return (
     <Wrapper>
-      <IconWrapper>{icon}</IconWrapper>
+      <IconWrapper>
+        <FontAwesomeIcon icon={icon} />{" "}
+      </IconWrapper>
       <TextWrapper>
         <h3>{text}</h3>
       </TextWrapper>
