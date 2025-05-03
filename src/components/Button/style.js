@@ -52,6 +52,14 @@ export const PrimaryButton = styled.button`
     color: ${({ theme }) => theme.colors.primary};
     transform: translateY(-3px);
   }
+  @media (max-width: 560px) {
+    padding: 12px 18px;
+    border-radius: 16px;
+
+    & p {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const SecondaryButton = styled.button`
@@ -78,6 +86,15 @@ export const SecondaryButton = styled.button`
 
     color: ${({ theme }) => theme.colors.white};
     transform: translateY(-3px);
+  }
+
+  @media (max-width: 560px) {
+    padding: 12px 18px;
+    border-radius: 16px;
+
+    & p {
+      font-size: 12px;
+    }
   }
 `;
 

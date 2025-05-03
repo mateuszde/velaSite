@@ -6,11 +6,21 @@ export const MapWrapper = styled.div`
   margin-top: 80px;
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 80px auto 0;
+  }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
   margin: 24px 0;
+
+  @media (max-width: 1140px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const IconsWrapper = styled.div`
@@ -18,6 +28,11 @@ export const IconsWrapper = styled.div`
   gap: 20px;
   margin: 24px 0 84px 0;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -39,8 +54,13 @@ export const TextContainer = styled.div`
 export const Gallery = styled.div`
   width: 600px;
   display: flex;
-  flex-direction: center;
+  /* flex-direction: center; */
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 500px;
+    overflow: hidden;
+  }
 `;
 
 export const ListItem = styled.li`

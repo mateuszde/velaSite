@@ -22,8 +22,8 @@ const lightGreenOption = { color: "#44bea2" };
 const MyMap = () => {
   return (
     <MapContainer
-      center={[54.21868628, 18.60951039]}
-      zoom={17}
+      center={[54.21880225508675, 18.609012705347187]}
+      zoom={18}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%" }}
     >

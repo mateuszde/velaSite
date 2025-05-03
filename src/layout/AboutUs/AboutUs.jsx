@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   margin-top: -20px;
   & div:first-child {
     width: 50%;
+
+    @media (max-width: 1140px) {
+      width: 80%;
+    }
   }
 
   &div:last-child {
@@ -22,8 +26,7 @@ const LogoWrapper = styled.div`
   height: 120px;
 
   & img {
-    height: 100%;
-    width: auto;
+    width: 100%;
   }
 `;
 
@@ -31,6 +34,7 @@ const AboutUs = () => {
   return (
     <ContainerWidth>
       <TextWithChildrenComponent
+        id="aboutUs"
         title="O nas"
         subtitle="Vela Group Sp. z o.o."
         text="Jesteśmy firmą deweloperską tworzoną przez zespół doświadczonych specjalistów z ponad 30-letnim stażem w branży budowlanej. Naszą misją jest realizacja inwestycji, które łączą najwyższą jakość wykonania z dbałością o relacje – zarówno z klientami, jak i partnerami biznesowymi."
@@ -51,9 +55,9 @@ const AboutUs = () => {
               rozwiązań, które zachwycają funkcjonalnością i estetyką.
             </Paragraph>
           </div>
-          <LogoWrapper>
+          {/* <LogoWrapper>
             <img src={logo} alt="Logo VelaGroup" />
-          </LogoWrapper>
+          </LogoWrapper> */}
         </Wrapper>
       </TextWithChildrenComponent>
     </ContainerWidth>

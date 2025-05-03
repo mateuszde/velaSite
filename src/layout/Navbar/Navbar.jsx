@@ -1,40 +1,79 @@
-import { NavbarContainer, LogoWrapper, NavWrapper, StyledList } from "./style";
+import {
+  NavbarContainer,
+  LogoWrapper,
+  NavWrapper,
+  StyledList,
+  StyledNavHashLink,
+  Burger,
+} from "./style";
+import { useState } from "react";
 import Button from "../../components/Button/Button";
-import logo from "../../assets/Logo/VelaLogoWhite.svg";
-import { fetchFile } from "../../utilites/fetchFile";
+import logoWhite from "../../assets/Logo/VelaLogoWhite.svg";
+import logoBlack from "../../assets/Logo/VelaLogoBlack.svg";
 
 const Navbar = () => {
-  const handleDownload = (fileName) => {
-    fetchFile(fileName);
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [color, setColor] = useState(false);
+  const checkbox = document.getElementById("checkbox");
+
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
   };
+
+  const handleTouch = () => {
+    if (checkbox) {
+      checkbox.checked = !checkbox.checked;
+      handleToggle();
+    }
+  };
+
+  const handleChangeColor = () => {
+    if (window.scrollY >= 150) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleChangeColor);
+
   return (
-    <NavbarContainer>
+    <NavbarContainer color={color}>
       <NavWrapper>
-        <LogoWrapper>
-          <img src={logo} alt="Logo VelaGroup" />
+        <LogoWrapper to="#">
+          {!color && <img src={logoWhite} alt="Logo VelaGroup" />}
+          {color && <img src={logoBlack} alt="Logo VelaGroup" />}
         </LogoWrapper>
         <div>
           <StyledList>
             <li>
-              <p>Lokalizacja</p>
+              <StyledNavHashLink to="#location">Lokalizacja</StyledNavHashLink>
             </li>
             <li>
-              <p>O inwestycji</p>
+              <StyledNavHashLink to="#investment">
+                O inwestycji
+              </StyledNavHashLink>
             </li>
             <li>
               <p>Realizacje</p>
             </li>
             <li>
-              <p>O nas</p>
+              <StyledNavHashLink to="#aboutUs">O nas</StyledNavHashLink>
             </li>
             <li>
-              <p>Kontakt</p>
+              <StyledNavHashLink to="#contact">Kontakt</StyledNavHashLink>
             </li>
             <li>
               <Button navigation>Skontaktuj się</Button>
             </li>
           </StyledList>
         </div>
+        <Burger color={color}>
+          <input type="checkbox" id="checkbox" />
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </Burger>
       </NavWrapper>
     </NavbarContainer>
   );

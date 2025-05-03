@@ -69,6 +69,7 @@ const Investment = () => {
   return (
     <ContainerWidth>
       <TextWithChildrenComponent
+        id="investment"
         title="O inwestycji"
         subtitle="Nowoczesne Domy w Żukczynie – Twoje Miejsce Blisko Natury"
         text="Zapraszamy do zapoznania się z naszą nową inwestycją w Żukczynie – kameralnym osiedlem domów jednorodzinnych położonym nad malowniczym potokiem. To idealne miejsce dla tych, którzy pragną połączyć komfort życia w nowoczesnym domu z bliskością przyrody."
@@ -148,8 +149,9 @@ const Investment = () => {
             <ImageGallery
               showPlayButton={false}
               showNav={false}
-              showBullets={false}
+              showBullets={true}
               items={images}
+              showThumbnails={true}
             />
           </Gallery>
         </ContentWrapper>
@@ -164,7 +166,7 @@ const Investment = () => {
               powietrzu.
             </Paragraph>
           </Wrapper>
-          <Wrapper>
+          <Wrapper id="location">
             <SubTitle>Lokalizacja</SubTitle>
             <Wrapper>
               <Paragraph>

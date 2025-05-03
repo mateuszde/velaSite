@@ -3,9 +3,9 @@ import { Wrapper, TitleWrapper, Title } from "./style";
 import TextColor from "../TextColor/TextColor";
 import SubTitle from "../SubTitle/SubTitle";
 
-const TextWithChildrenComponent = ({ title, text, children, subtitle }) => {
+const TextWithChildrenComponent = ({ id, title, text, children, subtitle }) => {
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <TitleWrapper>
         <SubTitle>{subtitle}</SubTitle>
         <Title>

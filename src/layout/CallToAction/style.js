@@ -19,6 +19,10 @@ export const ContainerWrapper = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 export const BackgroundImage = styled.img`
@@ -38,6 +42,10 @@ export const StyledHeading2 = styled.h2`
   margin-bottom: 20px;
   letter-spacing: 0.02em;
   font-weight: 600;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 `;
 
 export const ButtonsWrapper = styled.div`

@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faUser,
   faMobileAlt,
   faMap,
   faMessage,
@@ -19,6 +18,18 @@ const Wrapper = styled.div`
   margin: 40px auto;
   background-color: #fff;
   border-radius: 25px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    /* padding: 40px; */
+    background-color: transparent;
+  }
 `;
 const ImageWrapper = styled.div`
   border-radius: 25px;
@@ -86,6 +97,7 @@ const Contact = () => {
   return (
     <ContainerWidth>
       <TextWithChildrenComponent
+        id="contact"
         title="Kontakt"
         subtitle="chcesz się dowiedzieć więcej?"
         text="Masz pytania lub potrzebujesz dodatkowych informacji? Skontaktuj się z nami, a odpowiemy na wszelkie wątpliwości!"

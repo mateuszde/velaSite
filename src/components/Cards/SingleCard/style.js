@@ -1,13 +1,13 @@
 import styled from "styled-components";
+import { device } from "../../../device";
 
 export const SingleCardWrapper = styled.div`
-  /* height: 100px; */
   width: 30%;
+  height: 250px;
   padding: 35px;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  /* border: 1px solid ${({ theme }) => theme.colors.primary}; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: all 0.3s ease-in-out;
 
@@ -18,6 +18,29 @@ export const SingleCardWrapper = styled.div`
     & p {
       color: ${({ theme }) => theme.colors.white};
     }
+  }
+
+  @media (max-width: 1100px) {
+    padding: 30px;
+    width: 35%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 45%;
+    height: 210px;
+  }
+
+  @media (max-width: 715px) {
+    height: 230px;
+  }
+
+  @media (max-width: 650px) {
+    width: 90%;
+    justify-content: center;
+  }
+
+  @media (max-width: 360px) {
+    width: 100%;
   }
 `;
 
@@ -34,6 +57,10 @@ export const TitleWrapper = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     margin-left: 10px;
     transition: all 0.3s ease-in-out;
+
+    @media ${device.desktop} {
+      font-size: 20px;
+    }
   }
 
   ${SingleCardWrapper}:hover & {
@@ -57,5 +84,11 @@ export const IconWrapper = styled.div`
   ${SingleCardWrapper}:hover & {
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media ${device.desktop} {
+    min-height: 50px;
+    min-width: 50px;
+    font-size: 24px;
   }
 `;

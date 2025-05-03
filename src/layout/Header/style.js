@@ -7,6 +7,10 @@ export const Wrapper = styled.header`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    min-height: 100vh;
+  }
 `;
 
 export const LinearGradient = styled.div`
@@ -43,7 +47,7 @@ export const BackgroundImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: 10% 30%;
+  object-position: 50% 100%;
   filter: brightness(95%);
 `;
 
@@ -76,10 +80,34 @@ export const ContentWrapper = styled.div`
   & h1 {
     font-size: 70px;
     text-align: center;
+
+    @media (max-width: 1150px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100px);
   }
 `;
 
 export const StyledParagraph = styled.p`
   margin: 24px 0;
   font-size: 22px;
+
+  @media (max-width: 1150px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;

@@ -1,5 +1,6 @@
 //Styled components, globalstyle and themeprovider
 import { GlobalStyle } from "./GlobalStyle";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 //Components
 import Navbar from "./layout/Navbar/Navbar";
@@ -23,8 +24,14 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
 
-        <Navbar />
-        <Home dataCards={dataCards} />
+        <Router>
+          <Navbar />
+
+          <Routes>
+            <Route path="/velaSite" element={<Home dataCards={dataCards} />} />
+          </Routes>
+        </Router>
+
         <Footer />
       </ThemeProvider>
     </>

@@ -5,4 +5,8 @@ export const LineWrapper = styled.div`
   width: ${({ size }) => (size ? "400px" : "50px")};
   background-color: ${({ theme }) => theme.colors.primary};
   margin: 20px 0;
+
+  @media (max-width: 500px) {
+    width: ${({ size }) => (size ? "100%" : "50px")};
+  }
 `;
