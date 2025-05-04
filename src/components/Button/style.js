@@ -14,6 +14,11 @@ export const StyledNavButton = styled.button`
   font-weight: bold;
   line-height: 1.5;
   transition: 0.2s ease-in-out;
+  
+  @media (max-width: 1140px) {
+     background: ${({ theme }) => theme.colors.white};
+     color: ${({ theme }) => theme.colors.primary};
+  }
 
   & p {
     margin: 0;

@@ -5,6 +5,7 @@ import {
   StyledList,
   StyledNavHashLink,
   Burger,
+  NavLinksWrapper,
 } from "./style";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
@@ -44,8 +45,8 @@ const Navbar = () => {
           {!color && <img src={logoWhite} alt="Logo VelaGroup" />}
           {color && <img src={logoBlack} alt="Logo VelaGroup" />}
         </LogoWrapper>
-        <div>
-          <StyledList>
+        <NavLinksWrapper onClick={handleTouch}>
+          <StyledList navbarOpen={navbarOpen}>
             <li>
               <StyledNavHashLink to="#location">Lokalizacja</StyledNavHashLink>
             </li>
@@ -67,8 +68,8 @@ const Navbar = () => {
               <Button navigation>Skontaktuj się</Button>
             </li>
           </StyledList>
-        </div>
-        <Burger color={color}>
+        </NavLinksWrapper>
+        <Burger color={color} onClick={handleToggle}>
           <input type="checkbox" id="checkbox" />
           <span id="span1"></span>
           <span id="span2"></span>

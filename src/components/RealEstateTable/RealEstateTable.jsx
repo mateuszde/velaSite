@@ -1,6 +1,15 @@
 import Button from "../Button/Button";
 import styled from "styled-components";
+import { useState } from "react";
+import RealEstateCard from "./RealEstateCard";
 
+const CardsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+`;
 export const TableWrapper = styled.div`
   overflow-x: auto;
   border-radius: 8px;
@@ -76,35 +85,66 @@ const rows = [
 ];
 
 const RealEstateTable = () => {
+  const [tableCardView, setTableCardView] = useState(false);
+
+  const handleCardView = () => {
+    if (innerWidth < 730) {
+      setTableCardView(true);
+    } else {
+      setTableCardView(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleCardView);
+
   return (
-    <TableWrapper>
-      <StyledTable>
-        <Thead>
-          <tr>
-            <Th>Nr.</Th>
-            <Th>Powierzchnia</Th>
-            <Th>Działka</Th>
-            <Th>Pokoje</Th>
-            <Th>Status</Th>
-            <Th>Plan domu</Th>
-            <Th>Cena [zł]</Th>
-          </tr>
-        </Thead>
-        <tbody>
-          {rows.map((row, index) => (
-            <Tr key={row.number} even={index % 2 === 0}>
-              <Td>{row.number}</Td>
-              <Td>{row.houseArea}</Td>
-              <Td>{row.plotArea}</Td>
-              <Td>{row.rooms}</Td>
-              <Td>{row.status}</Td>
-              <Td>{row.housePlan}</Td>
-              <Td>{row.price}</Td>
-            </Tr>
+    <>
+      {tableCardView && (
+        <CardsWrapper>
+          {rows.map((row) => (
+            <RealEstateCard
+              number={row.number}
+              houseArea={row.houseArea}
+              plotArea={row.plotArea}
+              rooms={row.rooms}
+              status={row.status}
+              housePlan={row.housePlan}
+              price={row.price}
+            />
           ))}
-        </tbody>
-      </StyledTable>
-    </TableWrapper>
+        </CardsWrapper>
+      )}
+      {!tableCardView && (
+        <TableWrapper>
+          <StyledTable>
+            <Thead>
+              <tr>
+                <Th>Nr.</Th>
+                <Th>Powierzchnia</Th>
+                <Th>Działka</Th>
+                <Th>Pokoje</Th>
+                <Th>Status</Th>
+                <Th>Plan domu</Th>
+                <Th>Cena [zł]</Th>
+              </tr>
+            </Thead>
+            <tbody>
+              {rows.map((row, index) => (
+                <Tr key={row.number} even={index % 2 === 0}>
+                  <Td>{row.number}</Td>
+                  <Td>{row.houseArea}</Td>
+                  <Td>{row.plotArea}</Td>
+                  <Td>{row.rooms}</Td>
+                  <Td>{row.status}</Td>
+                  <Td>{row.housePlan}</Td>
+                  <Td>{row.price}</Td>
+                </Tr>
+              ))}
+            </tbody>
+          </StyledTable>
+        </TableWrapper>
+      )}
+    </>
   );
 };
 

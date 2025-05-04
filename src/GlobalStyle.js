@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Roboto", sans-serif;
         font-size: 16px;
         scroll-behavior: smooth;
-
     }
 
     h1, h2, h3, h4, h5, h6 {

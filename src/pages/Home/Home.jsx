@@ -9,7 +9,6 @@ import styled from "styled-components";
 const MainWrapper = styled.main`
   overflow-x: hidden;
 `;
-import { useEffect } from "react";
 
 import Container from "../../components/Container/Container";
 import ReactCompareImage from "react-compare-image";

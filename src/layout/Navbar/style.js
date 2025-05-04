@@ -32,7 +32,7 @@ export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 `;
 
 export const LogoWrapper = styled(NavHashLink)`
@@ -57,24 +57,49 @@ export const StyledList = styled.ul`
   text-transform: capitalize;
   list-style: none;
 
-  @media (max-width: 1140px) {
-    display: none;
-  }
   & li:last-child {
     margin-left: 30px;
+  }
+
+  @media (max-width: 1140px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    margin-right: -250px;
+    background-color: rgba(3, 98, 76, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: ${({ navbarOpen = false }) =>
+      navbarOpen ? "translate(-250px)" : "none"};
+    transition: 0.3s ease-in-out;
+
+    & li:last-child {
+      margin-left: 0;
+    }
   }
 `;
 
 export const StyledNavHashLink = styled(NavHashLink)`
   text-decoration: none;
   color: inherit;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-weight: 200;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 1140px) {
+    color: ${({ theme }) => theme.colors.white};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.black};
+    }
   }
 `;
 
@@ -83,8 +108,8 @@ export const Burger = styled.div`
   height: 35px;
   overflow: hidden;
   position: absolute;
-  top: 30px;
-  right: 10px;
+  top: 45px;
+  right: 30px;
   transform: translateY(-50%);
   display: none;
   flex-direction: column;
@@ -130,3 +155,5 @@ export const Burger = styled.div`
     transform: translateY(10px);
   }
 `;
+
+export const NavLinksWrapper = styled.div``;
