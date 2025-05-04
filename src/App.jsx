@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 //Components
 import Navbar from "./layout/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import CompletedConstructions from "./pages/CompletedConstructions/CompletedConstructions";
 import Footer from "./layout/Footer/Footer";
 
 //data
@@ -29,6 +30,10 @@ function App() {
 
           <Routes>
             <Route path="/velaSite" element={<Home dataCards={dataCards} />} />
+            <Route
+              path="/velaSite/realizacje"
+              element={<CompletedConstructions />}
+            />
           </Routes>
         </Router>
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavHashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.nav`
   position: fixed;
@@ -85,7 +86,26 @@ export const StyledList = styled.ul`
 export const StyledNavHashLink = styled(NavHashLink)`
   text-decoration: none;
   color: inherit;
-  /* text-transform: capitalize; */
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 1140px) {
+    color: ${({ theme }) => theme.colors.white};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.black};
+    }
+  }
+`;
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: inherit;
   font-weight: 200;
   cursor: pointer;
   transition: 0.2s ease-in-out;

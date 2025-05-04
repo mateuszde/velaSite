@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  min-height: 90vh;
+  min-height: ${({ subpage }) => (subpage ? "80vh" : "90vh")};
   position: relative;
   display: flex;
   justify-content: center;

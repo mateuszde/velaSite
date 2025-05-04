@@ -6,6 +6,7 @@ import {
   StyledNavHashLink,
   Burger,
   NavLinksWrapper,
+  StyledNavLink,
 } from "./style";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
@@ -56,7 +57,7 @@ const Navbar = () => {
               </StyledNavHashLink>
             </li>
             <li>
-              <p>Realizacje</p>
+              <StyledNavLink to="velaSite/realizacje">Realizacje</StyledNavLink>
             </li>
             <li>
               <StyledNavHashLink to="#aboutUs">O nas</StyledNavHashLink>
