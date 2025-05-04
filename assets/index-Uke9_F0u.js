@@ -1204,7 +1204,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin: 0 auto;
 `,L1=({children:a})=>O.jsx(H4,{children:a}),I4=ct.video`
   width: 100%;
-  margin: 40px 0;
+  margin-top: 60px;
   border-radius: 25px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `,q4=({videoSrc:a})=>O.jsx(L1,{children:O.jsx(I4,{src:a,controls:!0,muted:!0,loop:!0,autoPlay:!0,type:"video/mp4"})});function A1(a,r){const l=G.useRef(r);G.useEffect(function(){r!==l.current&&a.attributionControl!=null&&(l.current!=null&&a.attributionControl.removeAttribution(l.current),r!=null&&a.attributionControl.addAttribution(r)),l.current=r},[a,r])}const G4=1;function Y4(a){return Object.freeze({__version:G4,map:a})}function C1(a,r){return Object.freeze({...a,...r})}const Qm=G.createContext(null);function Jm(){const a=G.use(Qm);if(a==null)throw new Error("No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>");return a}function M1(a){function r(l,u){const{instance:h,context:p}=a(l).current;G.useImperativeHandle(u,()=>h);const{children:g}=l;return g==null?null:Le.createElement(Qm,{value:p},g)}return G.forwardRef(r)}function $4(a){function r(l,u){const[h,p]=G.useState(!1),{instance:g}=a(l,p).current;G.useImperativeHandle(u,()=>g),G.useEffect(function(){h&&g.update()},[g,h,l.children]);const x=g._contentNode;return x?Mw.createPortal(l.children,x):null}return G.forwardRef(r)}function V4(a){function r(l,u){const{instance:h}=a(l).current;return G.useImperativeHandle(u,()=>h),null}return G.forwardRef(r)}function tp(a,r){const l=G.useRef(void 0);G.useEffect(function(){return r!=null&&a.instance.on(r),l.current=r,function(){l.current!=null&&a.instance.off(l.current),l.current=null}},[a,r])}function cf(a,r){const l=a.pane??r.pane;return l?{...a,pane:l}:a}function W4(a,r){return function(u,h){const p=Jm(),g=a(cf(u,p),p);return A1(p.map,u.attribution),tp(g.current,u.eventHandlers),r(g.current,p,u,h),g}}var xl={exports:{}};/* @preserve
@@ -1258,6 +1258,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   /* flex-direction: center; */
   align-items: center;
+
+  @media (max-width: 1140px) {
+    margin: 50px 0;
+  }
 
   @media (max-width: 768px) {
     width: 500px;
