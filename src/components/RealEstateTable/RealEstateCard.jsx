@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import TextColor from "../TextColor/TextColor";
-import TextBolder from "../TextBolder/TextBolder";
 const CardWrapper = styled.div`
   width: 300px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

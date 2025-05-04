@@ -57,6 +57,10 @@ export const Gallery = styled.div`
   /* flex-direction: center; */
   align-items: center;
 
+  @media (max-width: 1140px) {
+    margin: 50px 0;
+  }
+
   @media (max-width: 768px) {
     width: 500px;
     overflow: hidden;
