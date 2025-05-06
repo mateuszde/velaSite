@@ -80,7 +80,7 @@ export const ListItem = styled.li`
     width: 7px;
     top: 50%;
     transform: translateY(-50%);
-    left: -15px;
+    left: -25px;
     background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
