@@ -69,6 +69,7 @@ export const Gallery = styled.div`
 
 export const ListItem = styled.li`
   margin-left: 40px;
+  margin-bottom: 20px;
   position: relative;
 
   &::before {
@@ -86,4 +87,8 @@ export const ListItem = styled.li`
 
 export const List = styled.ul`
   list-style: none;
+`;
+
+export const ParagraphWrapper = styled.div`
+  margin-bottom: 20px;
 `;

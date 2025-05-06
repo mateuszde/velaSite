@@ -27,6 +27,7 @@ import {
   List,
   IconsWrapper,
   MapWrapper,
+  ParagraphWrapper,
 } from "./style";
 
 import image1 from "../../assets/Images/1_hr.jpg";
@@ -37,6 +38,7 @@ import image5 from "../../assets/Images/5_hr.jpg";
 import image6 from "../../assets/Images/6_hr.jpg";
 import IconWithText from "../../components/IconWithText/IconWithText";
 import RealEstateTable from "../../components/RealEstateTable/RealEstateTable";
+import TextColor from "../../components/TextColor/TextColor";
 
 const images = [
   {
@@ -78,25 +80,33 @@ const Investment = () => {
           <TextContainer>
             <SubTitle>Funkcjonalność i Nowoczesny Standard</SubTitle>
             <div>
-              <Paragraph>
-                <TextBolder>
-                  W ramach inwestycji powstaną dwa nowoczesne domy:
-                </TextBolder>
-              </Paragraph>
+              <ParagraphWrapper>
+                <Paragraph>
+                  <TextBolder>
+                    W ramach inwestycji powstaną dwa nowoczesne domy:
+                  </TextBolder>
+                </Paragraph>
+              </ParagraphWrapper>
+
               <List>
                 <ListItem>
                   <Paragraph>
-                    <TextBolder>Dom dwulokalowy B1 oraz B2</TextBolder> – o
-                    powierzchniach <TextBolder>120 m²</TextBolder> każdy, z
-                    przestronnymi garażami i funkcjonalnymi układami
+                    <TextBolder>Dom dwulokalowy B1 oraz B2</TextBolder> – każdy
+                    o powierzchni
+                    <TextBolder> 121,28 m²</TextBolder>,
+                  </Paragraph>
+                  <Paragraph>
+                    z przestronnymi garażami i funkcjonalnymi układami
                     pomieszczeń.
                   </Paragraph>
                 </ListItem>
                 <ListItem>
                   <Paragraph>
                     <TextBolder>Dom wolnostojący A1 </TextBolder>– o powierzchni{" "}
-                    <TextBolder>183 m²</TextBolder>, oferujący maksymalną
-                    przestrzeń i prywatność.
+                    <TextBolder>183 m²</TextBolder>,
+                  </Paragraph>
+                  <Paragraph>
+                    oferujący maksymalną przestrzeń i prywatność.
                   </Paragraph>
                 </ListItem>
               </List>
@@ -110,7 +120,9 @@ const Investment = () => {
               </Paragraph>
             </div>
             <div>
-              <Paragraph>Standard wykończenia:</Paragraph>
+              <ParagraphWrapper>
+                <Paragraph>Standard wykończenia:</Paragraph>
+              </ParagraphWrapper>
               <List>
                 <ListItem>
                   <Paragraph>
@@ -170,25 +182,37 @@ const Investment = () => {
             <SubTitle>Lokalizacja</SubTitle>
             <Wrapper>
               <Paragraph>
-                Nasze osiedle usytuowane jest w spokojnej okolicy Żukczyna,
-                zaledwie kilkanaście minut jazdy od centrum Gdańska. Bliskość
-                obwodnicy oraz stacji PKM zapewnia doskonałą komunikację z całym
-                Trójmiastem. Otoczenie zieleni i sąsiedztwo potoku tworzą
-                unikalny klimat sprzyjający relaksowi i aktywnemu wypoczynkowi
-                na świeżym powietrzu.
+                Zaledwie{" "}
+                <TextBolder>
+                  5 km dzieli inwestycję od centrum Pruszcza Gdańskiego i 17 km
+                  od Gdańska,
+                </TextBolder>{" "}
+                co zapewnia wygodny dostęp do pełnej infrastruktury miejskiej.
+                Otulina drzew oraz bliskość strumyka Kłodawa tworzą
+                niepowtarzalny klimat prywatności, spokoju i relaksu, a w
+                sąsiedztwie znajdują się eleganckie rezydencje, domy
+                jednorodzinne oraz klimatyczne mini zoo „Zwierzęta nad
+                Potokiem”. W promieniu kilku kilometrów dostępne są szkoła,
+                przychodnia, sklepy, obiekty sportowe, przystanek PKS (200 m)
+                oraz stacja kolejowa – wszystko, co potrzebne do komfortowego
+                życia na co dzień.
               </Paragraph>
               <Video videoSrc={srcVideo} />
             </Wrapper>
           </Wrapper>
           <Wrapper>
-            <SubTitle>Architektura i Standard Wykończenia</SubTitle>
+            <SubTitle>Domy zaprojektowane z myślą o Tobie</SubTitle>
             <Wrapper>
               <Paragraph>
-                Inwestycja obejmuje nowoczesne domy jednorodzinne o przemyślanym
-                układzie przestrzennym. Każdy dom posiada przestronny salon z
-                aneksem kuchennym, kilka sypialni, łazienki oraz garaż. Duże
-                przeszklenia zapewniają doskonałe doświetlenie wnętrz i
-                pozwalają cieszyć się widokiem na otaczającą przyrodę.
+                Inwestycja to wyjątkowy projekt indywidualny, stworzony na
+                zamówienie z myślą o najbardziej wymagających klientach,
+                ceniących komfort, estetykę i kontakt z naturą. Nowoczesne domy
+                jednorodzinne wyróżniają się przemyślanym układem funkcjonalnym
+                – każdy z nich oferuje przestronny salon z aneksem kuchennym,
+                kilka sypialni, wygodne łazienki oraz garaż. Duże przeszklenia
+                nie tylko doskonale doświetlają wnętrza, ale również otwierają
+                je na otaczającą zieleń, zapewniając codzienny kontakt z naturą
+                i wyjątkową jakość życia.
               </Paragraph>
               <Paragraph>
                 W trosce o komfort mieszkańców, domy wyposażone są w nowoczesne

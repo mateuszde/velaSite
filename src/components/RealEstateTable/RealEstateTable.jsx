@@ -2,6 +2,7 @@ import Button from "../Button/Button";
 import styled from "styled-components";
 import { useState } from "react";
 import RealEstateCard from "./RealEstateCard";
+import TextColor from "../TextColor/TextColor";
 
 const CardsWrapper = styled.div`
   display: flex;
@@ -58,25 +59,25 @@ const rows = [
   createData(
     "A1",
     "184,59 m2",
-    "657 m2",
+    "~657 m2",
     5,
-    "Dostępny",
+    <TextColor>Dostępny</TextColor>,
     <Button small> Pobierz</Button>,
     "1 350 000"
   ),
   createData(
     "B1",
-    "116,69 m2",
-    "350 m2",
+    "121,28 m2",
+    "~350 m2",
     4,
-    "Dostępny",
+    <TextColor>Dostępny</TextColor>,
     <Button small> Pobierz</Button>,
     "950 000"
   ),
   createData(
     "B2",
-    "116,69 m2",
-    "350 m2",
+    "121,28 m2",
+    "~350 m2",
     4,
     "Rezerwacja",
     <Button small> Pobierz</Button>,
