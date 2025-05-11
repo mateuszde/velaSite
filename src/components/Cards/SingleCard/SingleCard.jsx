@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SingleCardWrapper, IconWrapper, TitleWrapper } from "./style";
+
 const SingleCard = ({ icon, title, description }) => {
   return (
     <SingleCardWrapper>

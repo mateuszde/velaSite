@@ -1,5 +1,5 @@
 export const fetchFile = (fileName) => {
-  const fileUrl = `${process.env.PUBLIC_URL}/${fileName}`;
+  const fileUrl = `/${fileName}`;
 
   fetch(fileUrl)
     .then((response) => {

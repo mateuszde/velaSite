@@ -3,6 +3,7 @@ import Paragraph from "../../components/Paragraph/Paragraph";
 import ContainerWidth from "../../components/ContainerWidth/ContainerWidth";
 import TextColor from "../../components/TextColor/TextColor";
 import TextBolder from "../../components/TextBolder/TextBolder";
+import image from "../../assets/Images/2_hr.jpg";
 
 import {
   Wrapper,
@@ -10,8 +11,8 @@ import {
   BackgroundImage,
   StyledHeading2,
   ButtonsWrapper,
+  StyledNavHashLink,
 } from "./style";
-import image from "../../assets/Images/2_hr.jpg";
 
 const CallToAction = () => {
   return (
@@ -23,13 +24,15 @@ const CallToAction = () => {
             Jesteś zainteresowany <TextColor>?</TextColor>
           </StyledHeading2>
           <Paragraph light="true">
-            <TextBolder>Vela Park</TextBolder> to wyjątkowe połączenie komfortu,
-            nowoczesnych technologii i bliskości natury. To miejsce, w którym
-            możesz stworzyć swój wymarzony dom. Skontaktuj się z nami i
+            <TextBolder>Domy Nad Potokiem</TextBolder> to wyjątkowe połączenie
+            komfortu, nowoczesnych technologii i bliskości natury. To miejsce, w
+            którym możesz stworzyć swój wymarzony dom. Skontaktuj się z nami i
             zarezerwuj swój dom już dziś!
           </Paragraph>
           <ButtonsWrapper>
-            <Button primary>Zadzwoń teraz</Button>
+            <StyledNavHashLink to="#contact">
+              <Button primary>Zadzwoń teraz</Button>
+            </StyledNavHashLink>
           </ButtonsWrapper>
         </ContainerWrapper>
       </ContainerWidth>

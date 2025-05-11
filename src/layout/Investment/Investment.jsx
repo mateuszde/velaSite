@@ -18,6 +18,10 @@ import srcVideo from "../../assets/Video/DronInwestycja.mp4";
 import Video from "../../components/Video/Video";
 import MyMap from "../../components/MyMap/MyMap";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import {
   ContentWrapper,
   Wrapper,
@@ -38,7 +42,6 @@ import image5 from "../../assets/Images/5_hr.jpg";
 import image6 from "../../assets/Images/6_hr.jpg";
 import IconWithText from "../../components/IconWithText/IconWithText";
 import RealEstateTable from "../../components/RealEstateTable/RealEstateTable";
-import TextColor from "../../components/TextColor/TextColor";
 
 const images = [
   {
@@ -68,8 +71,13 @@ const images = [
 ];
 
 const Investment = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <ContainerWidth>
+    <ContainerWidth id="investment">
       <TextWithChildrenComponent
         id="investment"
         title="O inwestycji"
@@ -113,7 +121,7 @@ const Investment = () => {
             </div>
             <div>
               <Paragraph>
-                Domy w <TextBolder>Vela Park</TextBolder> spełniają wysokie
+                <TextBolder>Domy Nad Potokiem</TextBolder> spełniają wysokie
                 standardy energooszczędności. Zamiast tradycyjnego ogrzewania
                 gazowego zastosowaliśmy pompę ciepła, co zapewnia niższe koszty
                 eksploatacji oraz większą troskę o środowisko.
@@ -157,7 +165,7 @@ const Investment = () => {
               </List>
             </div>
           </TextContainer>
-          <Gallery>
+          <Gallery data-aos="fade-up">
             <ImageGallery
               showPlayButton={false}
               showNav={false}
@@ -223,7 +231,7 @@ const Investment = () => {
               </Paragraph>
             </Wrapper>
           </Wrapper>
-          <IconsWrapper>
+          <IconsWrapper data-aos="fade-up">
             <IconWithText
               icon={faHouseChimney}
               text="funkcjonalny układ pomieszczeń"

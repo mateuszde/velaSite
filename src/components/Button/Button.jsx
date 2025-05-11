@@ -4,6 +4,7 @@ import {
   SecondaryButton,
   SmallButton,
 } from "./style";
+import { fetchFile } from "../../utilites/fetchFile";
 
 const Button = ({
   children,
@@ -11,6 +12,7 @@ const Button = ({
   primary,
   secondary,
   small,
+  downloadFile,
   ...props
 }) => {
   return (
@@ -34,7 +36,7 @@ const Button = ({
       )}
 
       {small && (
-        <SmallButton {...props}>
+        <SmallButton onClick={() => fetchFile(downloadFile)} {...props}>
           <p>{children}</p>
         </SmallButton>
       )}

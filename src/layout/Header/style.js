@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
 
 export const Wrapper = styled.header`
   min-height: ${({ subpage }) => (subpage ? "80vh" : "90vh")};
@@ -47,7 +48,7 @@ export const BackgroundImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: 50% 100%;
+  /* object-position: 50% 100%; */
   filter: brightness(95%);
 `;
 
@@ -88,6 +89,10 @@ export const ContentWrapper = styled.div`
     @media (max-width: 500px) {
       font-size: 40px;
     }
+
+    @media (max-width: 400px) {
+      font-size: 32px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -109,5 +114,25 @@ export const StyledParagraph = styled.p`
 
   @media (max-width: 500px) {
     font-size: 16px;
+  }
+`;
+
+export const StyledNavHashLink = styled(NavHashLink)`
+  text-decoration: none;
+  color: inherit;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 1140px) {
+    color: ${({ theme }) => theme.colors.white};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.black};
+    }
   }
 `;

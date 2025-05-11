@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
 
 export const Wrapper = styled.header`
   min-height: 500px;
@@ -52,4 +53,24 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 32px;
   margin-top: 40px;
+`;
+
+export const StyledNavHashLink = styled(NavHashLink)`
+  text-decoration: none;
+  color: inherit;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 1140px) {
+    color: ${({ theme }) => theme.colors.white};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.black};
+    }
+  }
 `;

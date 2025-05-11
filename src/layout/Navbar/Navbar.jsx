@@ -42,31 +42,33 @@ const Navbar = () => {
   return (
     <NavbarContainer color={color}>
       <NavWrapper>
-        <LogoWrapper to="#">
+        <LogoWrapper to="/#">
           {!color && <img src={logoWhite} alt="Logo VelaGroup" />}
           {color && <img src={logoBlack} alt="Logo VelaGroup" />}
         </LogoWrapper>
         <NavLinksWrapper onClick={handleTouch}>
           <StyledList navbarOpen={navbarOpen}>
             <li>
-              <StyledNavHashLink to="#location">Lokalizacja</StyledNavHashLink>
+              <StyledNavHashLink to="/#location">Lokalizacja</StyledNavHashLink>
             </li>
             <li>
-              <StyledNavHashLink to="#investment">
+              <StyledNavHashLink to="/#investment">
                 O inwestycji
               </StyledNavHashLink>
             </li>
             <li>
-              <StyledNavLink to="velaSite/realizacje">Realizacje</StyledNavLink>
+              <StyledNavLink to="/realizacje">Realizacje</StyledNavLink>
             </li>
             <li>
-              <StyledNavHashLink to="#aboutUs">O nas</StyledNavHashLink>
+              <StyledNavHashLink to="/#aboutUs">O nas</StyledNavHashLink>
             </li>
             <li>
-              <StyledNavHashLink to="#contact">Kontakt</StyledNavHashLink>
+              <StyledNavHashLink to="/#contact">Kontakt</StyledNavHashLink>
             </li>
             <li>
-              <Button navigation>Skontaktuj się</Button>
+              <StyledNavHashLink to="/#contact">
+                <Button navigation>Skontaktuj się</Button>
+              </StyledNavHashLink>
             </li>
           </StyledList>
         </NavLinksWrapper>

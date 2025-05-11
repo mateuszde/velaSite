@@ -1,47 +1,20 @@
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Button from "../Button/Button";
-import styled from "styled-components";
-import { useState } from "react";
 import RealEstateCard from "./RealEstateCard";
 import TextColor from "../TextColor/TextColor";
 
-const CardsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-`;
-export const TableWrapper = styled.div`
-  overflow-x: auto;
-  border-radius: 8px;
-  box-shadow: rgba(3, 98, 76, 0.2) 0 4px 9px;
-`;
-
-export const StyledTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-`;
-
-export const Thead = styled.thead`
-  background-color: ${({ theme }) => theme.colors.primary}; /* zielony */
-  color: white;
-`;
-
-export const Th = styled.th`
-  padding: 16px;
-  text-align: center;
-`;
-
-export const Tr = styled.tr`
-  background-color: ${(props) => (props.even ? "#ffffff" : "#f5f5f5")};
-  text-align: center;
-`;
-
-export const Td = styled.td`
-  padding: 12px;
-  border-top: 1px solid #eee;
-`;
+import {
+  CardsWrapper,
+  TableWrapper,
+  StyledTable,
+  Thead,
+  Th,
+  Tr,
+  Td,
+} from "./StyleRealEstateTable";
 
 function createData(
   number,
@@ -62,7 +35,9 @@ const rows = [
     "~657 m2",
     5,
     <TextColor>Dostępny</TextColor>,
-    <Button small> Pobierz</Button>,
+    <Button small downloadFile="PlanyA1.zip">
+      Pobierz
+    </Button>,
     "1 350 000"
   ),
   createData(
@@ -71,7 +46,10 @@ const rows = [
     "~350 m2",
     4,
     <TextColor>Dostępny</TextColor>,
-    <Button small> Pobierz</Button>,
+    <Button small downloadFile="PlanyB1.zip">
+      {" "}
+      Pobierz
+    </Button>,
     "950 000"
   ),
   createData(
@@ -80,13 +58,21 @@ const rows = [
     "~350 m2",
     4,
     "Rezerwacja",
-    <Button small> Pobierz</Button>,
+    <Button small downloadFile="PlanyB2.zip">
+      {" "}
+      Pobierz
+    </Button>,
     "950 000"
   ),
 ];
 
 const RealEstateTable = () => {
   const [tableCardView, setTableCardView] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const handleCardView = () => {
     if (innerWidth < 730) {
@@ -116,7 +102,7 @@ const RealEstateTable = () => {
         </CardsWrapper>
       )}
       {!tableCardView && (
-        <TableWrapper>
+        <TableWrapper data-aos="fade-up">
           <StyledTable>
             <Thead>
               <tr>
